@@ -2,7 +2,7 @@
 
 context:
   name: nccl4py
-  version: "0.2.0"
+  version: "0.4.1"
 
 package:
   name: ${{ name }}
@@ -13,10 +13,10 @@ source:
   # NVIDIA/nccl repository; the tarball extracts to `nccl-nccl4py-vX.Y.Z/`
   # with the Python package at `nccl4py/` in that root.
   url: https://github.com/NVIDIA/nccl/archive/refs/tags/nccl4py-v${{ version }}.tar.gz
-  sha256: 190f099968bc6962ca401f0b0f8dd01dbc8f93d2ed8889380f69f98470813c8b
+  sha256: ad64f9df92c2535e3089639b195cc055693f7bf8ce140b7a8555dc509817119a
 
 build:
-  number: 1
+  number: 0
   skip:
     - not linux
     - cuda_compiler_version == "None"
